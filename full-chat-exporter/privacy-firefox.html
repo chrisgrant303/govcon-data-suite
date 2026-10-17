@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy – Full Chat Exporter (Firefox)</title>
+<style>body{font-family:system-ui,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.6;color:#1e293b}a{color:#2563eb}</style>
+</head><body>
+<h1>Privacy Policy: Full Chat Exporter: AI Chat to Markdown &amp; PDF (Firefox)</h1>
+<p>Effective date: October 16, 2026</p>
+<p>Full Chat Exporter ("the Extension") is published by <strong>CCE Partners LLC</strong> ("we", "us"), 2501 Chatham Rd #4369, Springfield, IL 62704, USA. Contact: chris@hichrisgrant.com. This policy applies to the Firefox version of the Extension, distributed through addons.mozilla.org.</p>
+<h2>Summary</h2>
+<ul>
+<li>The Extension turns the AI chat conversation you are viewing into a file that your browser downloads. Your conversations are processed <strong>only inside your browser</strong>. They are never sent to us, to our payment providers or to anyone else.</li>
+<li>We run no server that receives data from the Extension, and the Extension has no analytics, telemetry, advertising or tracking.</li>
+<li><strong>Payment data is handled only for Pro buyers.</strong> The sections on ExtensionPay and Stripe below apply <strong>only</strong> if you buy Pro, or start to by clicking Unlock Pro. If you use only the free Markdown export, the Extension never contacts ExtensionPay or Stripe and no payment or account data is created.</li>
+</ul>
+<h2>What the Extension accesses</h2>
+<ul>
+<li><strong>Page content on supported chat sites only</strong> (chatgpt.com, chat.openai.com, claude.ai, gemini.google.com, grok.com, perplexity.ai), and only when you click Export. The conversation is converted to a file in your browser.</li>
+<li><strong>ChatGPT same-site request:</strong> on chatgpt.com / chat.openai.com, when you click Export, the Extension asks ChatGPT's own website, with your existing logged-in session, for the conversation you are viewing (the same request the ChatGPT page makes). This request goes only to ChatGPT (OpenAI). The temporary session token is held in memory for that one export and is never stored, logged or sent anywhere else. If the request fails, the Extension reads the conversation from the page instead.</li>
+<li><strong><code>activeTab</code> and <code>scripting</code>:</strong> when you open the Extension on a supported chat tab that was already open, these let it load its own packaged exporter code into that one tab. They give no access to other tabs or sites.</li>
+</ul>
+<h2>Optional data-collection permission (Firefox)</h2>
+<ul>
+<li>The Extension declares no required data collection. When you click <strong>Unlock Pro</strong>, Firefox asks you to allow three optional data-collection categories: <strong>authentication information</strong>, <strong>financial and payment information</strong> and <strong>personally identifying information</strong>. They cover only the ExtensionPay purchase and license check described below.</li>
+<li>Until you allow them, the Extension makes no request to ExtensionPay at all and Pro stays locked. If you decline, the free Markdown export keeps working.</li>
+<li>You can remove the permission at any time in Firefox's Add-ons Manager (about:addons → the Extension → Permissions). The Extension then reloads, stops contacting ExtensionPay and locks Pro again. Data that ExtensionPay already stored in the Extension's storage stays there until you uninstall the Extension.</li>
+</ul>
+<h2>Pro purchases: what ExtensionPay and Stripe receive (Pro buyers only)</h2>
+<p>Pro is an optional <strong>$4.99 one-time</strong> purchase. It is sold through <strong>ExtensionPay</strong> (extensionpay.com), a payment service for browser extensions, and paid through <strong>Stripe</strong>, which processes the card payment.</p>
+<ul>
+<li><strong>When you allow the optional data-collection permission and click </strong>Unlock Pro<strong>:</strong> the Extension asks ExtensionPay to create an <strong>installation key</strong>, a random identifier for your copy of the Extension. This request contains no personal data, but like any web request it reveals your IP address and browser type to ExtensionPay. The Extension then opens ExtensionPay's checkout page in a new tab, with the installation key in the page address.</li>
+<li><strong>On the checkout pages (ExtensionPay / Stripe Checkout):</strong> you type your <strong>email address</strong> and your <strong>payment details</strong> (card number or another payment method, and any billing details Stripe asks for) directly into those web pages, not into the Extension. <strong>Stripe</strong> receives and processes the payment details. <strong>ExtensionPay</strong> receives your email address and the purchase record (for example amount, date and paid status) and links them to your installation key. The Extension never sees your card details.</li>
+<li><strong>License checks:</strong> to know whether Pro is unlocked, the Extension sends ExtensionPay your <strong>installation key</strong>. This happens when you open the Extension or use a Pro feature; the answer is reused for up to 10 minutes. Right after you pay, it also checks about once per second for up to 2 minutes, so Pro unlocks quickly. ExtensionPay answers with your <strong>license/user status</strong>: whether and when you paid, the <strong>email address</strong> linked to the purchase, and plan or trial fields if any. The Extension itself uses only the paid / not-paid answer.</li>
+<li><strong>Confirmation page:</strong> the Extension includes ExtensionPay's small script that runs only on extensionpay.com pages, so it can tell the Extension when a purchase is complete.</li>
+<li><strong>Restoring Pro on another device:</strong> if you use ExtensionPay's option to log in with the email you paid with, you enter that email on ExtensionPay's page.</li>
+<li><strong>Never sent</strong> to ExtensionPay or Stripe: your chats, the pages you visit, or your ChatGPT session.</li>
+<li><strong>What we receive:</strong> as the seller, CCE Partners LLC can see the purchase record (your email, the amount and the date) in our ExtensionPay and Stripe accounts. We use it only for accounting, support and refunds, and keep it only as long as legally required.</li>
+<li>Stripe's privacy policy: <a href="https://stripe.com/privacy">https://stripe.com/privacy</a>. ExtensionPay handles the data it receives as the payment service for this purchase. For questions about it, contact us and we will help.</li>
+</ul>
+<h2>What is stored in your browser</h2>
+<ul>
+<li>The Extension stores <strong>no chat content</strong>.</li>
+<li>The ExtensionPay library keeps its data in the browser's <strong>sync storage</strong> (<code>storage.sync</code>), not only on this device. Firefox may copy sync storage to your other devices if you use Firefox Sync with add-on data syncing turned on. (It uses local storage on this device only if sync storage is unavailable.)</li>
+<li>After you allow the optional permission, the ExtensionPay library records the date the Extension was first installed (<code>extensionpay_installed_at</code>) in sync storage. This date is not sent anywhere.</li>
+<li><strong>Pro buyers only</strong> (after you click Unlock Pro): the <strong>installation key</strong> (<code>extensionpay_api_key</code>) and the latest <strong>license/user status</strong> from ExtensionPay (<code>extensionpay_user</code>: paid status and date, the email linked to the purchase, and plan or trial fields).</li>
+<li>A local debug flag, if you turn on diagnostics.</li>
+<li>Uninstalling the Extension removes its storage from this browser. Copies held by your browser's sync service are removed according to that service's own rules.</li>
+</ul>
+<h2>What we do not do</h2>
+<ul>
+<li>We do not collect, sell or transfer your conversations or browsing data.</li>
+<li>We use payment data only for the Pro purchase and license check, and never for advertising, creditworthiness or lending.</li>
+<li>No remote code: all code, including ExtensionPay's library (ExtPay.js), ships inside the Extension package.</li>
+</ul>
+<h2>Children</h2>
+<p>The Extension is not directed to children under 13.</p>
+<h2>Not affiliated</h2>
+<p>The Extension is an independent tool. It is not affiliated with OpenAI, Anthropic, Google, xAI or Perplexity; their product names are used only to describe compatibility.</p>
+<h2>Changes</h2>
+<p>We will post updates on this page and change the effective date.</p>
+<h2>Contact</h2>
+<p>CCE Partners LLC, 2501 Chatham Rd #4369, Springfield, IL 62704, USA: chris@hichrisgrant.com</p>
+</body></html>
