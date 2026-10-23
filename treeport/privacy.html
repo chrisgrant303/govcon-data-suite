@@ -1,17 +1,18 @@
 <!doctype html>
-<!-- GTM draft Oct 20, 2026. Updated Oct 22, 2026 (RC2 review MINOR-2 a-c). NOT published. Generated from privacy-policy.md; see the hosting note at the top of that file. -->
+<!-- GTM draft Oct 20, 2026. Updated Oct 22, 2026 (RC2 review MINOR-2 a-c); published Oct 22 (sha 005b25d2…). v2 Oct 22 ~6:50 PM CT: ExtensionPay trigger fix (privacy-extpay-trigger-fix.md), 'Last updated' placeholder HELD. v2 NOT published. Generated from privacy-policy.md; see the hosting note at the top of that file. -->
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Privacy Policy – Treeport (Chrome)</title>
 <style>body{font-family:system-ui,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.6;color:#1e293b}a{color:#2563eb}</style>
 </head><body>
 <h1>Privacy Policy: Treeport: Mind Map Exporter for Gemini Notebook™</h1>
 <p>Effective date: October 22, 2026</p>
+<p>Last updated: October 23, 2026</p>
 <p>Treeport ("the Extension") is published by <strong>CCE Partners LLC</strong> ("we", "us"), 2501 Chatham Rd #4369, Springfield, IL 62704, USA. Contact: chris@hichrisgrant.com. This policy applies to the Google Chrome version of the Extension, distributed through the Chrome Web Store.</p>
 <h2>Summary</h2>
 <ul>
 <li>The Extension turns the mind map you are viewing in Gemini Notebook (formerly NotebookLM) into a file that your browser downloads. Your notebook content is processed <strong>only inside your browser</strong>. It is never sent to us, to our payment providers or to anyone else.</li>
 <li><strong>The only network contact is ExtensionPay (extensionpay.com)</strong>, our payment provider, used for licence checks only (plus Pro checkout, restore and subscription management through ExtensionPay's pages). Export processing is fully local: your mind map is never sent anywhere. We run no server that receives data from the Extension, and the Extension has no analytics, telemetry, advertising or tracking.</li>
-<li><strong>Free users never contact ExtensionPay.</strong> Treeport contacts no server while you use the free formats (Markdown, OPML). Clicking "Upgrade to Pro" only shows the plan choices and contacts no server. Treeport connects to ExtensionPay only when you pick a plan (Monthly, Yearly, Lifetime, "Compare all plans" or "Manage subscription") or click Restore purchase, and when you choose a Pro export format. A Pro export checks your licence with ExtensionPay (installation key only); if you have never picked a plan or restored a purchase, there is no key and nothing is sent. That check sends only an anonymous installation key, never your mind map, notebook titles or URLs. After you pay, ExtensionPay's confirmation page tells Treeport to re-check your status for up to two minutes.</li>
+<li><strong>Free users who have never picked a plan or restored a purchase never contact ExtensionPay.</strong> Treeport contacts no server while you use the free formats (Markdown, OPML). Clicking "Upgrade to Pro" only shows the plan choices and contacts no server. Treeport contacts ExtensionPay only when you start a Pro export, start or restore Pro (pick a plan: Monthly, Yearly, Lifetime, "Compare all plans" or "Manage subscription"; or click Restore purchase), or visit ExtensionPay's own pages (such as its checkout or subscription-management pages). If you have never picked a plan or restored a purchase, there is no installation key and nothing is sent. These requests send only an installation key, never your mind map, notebook titles or URLs. While one of ExtensionPay's pages is open, ExtensionPay's library can re-check your status about once per second for up to two minutes, without any click in Treeport.</li>
 <li><strong>Payment data is handled only for Pro buyers.</strong> The ExtensionPay and Stripe section below applies <strong>only</strong> if you buy Pro, or start to by picking a plan or clicking Restore purchase. If you use only the free exports, no payment or account data is created.</li>
 </ul>
 <h2>What the Extension accesses</h2>
@@ -26,8 +27,8 @@
 <ul>
 <li><strong>The first time you pick a plan or click Restore purchase:</strong> the Extension asks ExtensionPay to create an <strong>installation key</strong>, a random identifier for your copy of the Extension. This request contains no personal data, but like any web request it reveals your IP address and browser type to ExtensionPay. The Extension then opens ExtensionPay's checkout page in a new tab (or, for Restore purchase, ExtensionPay's login page in a small window).</li>
 <li><strong>On the checkout pages (ExtensionPay / Stripe Checkout):</strong> you type your <strong>email address</strong> and <strong>payment details</strong> directly into those web pages, not into the Extension. <strong>Stripe</strong> processes the payment details. <strong>ExtensionPay</strong> receives your email address and the purchase record (for example plan, amount, date, paid status and, for subscriptions, renewal or cancellation status) and links them to your installation key. The Extension never sees your card details.</li>
-<li><strong>Licence checks (each time you choose a Pro export format, once you have an installation key, and for up to two minutes after you pay):</strong> to know whether Pro is unlocked, the Extension sends ExtensionPay your <strong>installation key</strong>, and nothing else from the Extension. ExtensionPay answers with your licence status (whether and when you paid, the email linked to the purchase, and plan or trial fields if any). The Extension itself uses only the paid / not-paid answer.</li>
-<li><strong>Confirmation page:</strong> the Extension includes ExtensionPay's small script that runs only on extensionpay.com pages, so it can tell the Extension when a purchase is complete.</li>
+<li><strong>Licence checks (once you have an installation key: each time you start a Pro export, and whenever you visit one of ExtensionPay's own pages, such as its checkout, payment-confirmation or subscription-management pages, when the check can repeat about once per second for up to two minutes without any click in Treeport):</strong> to know whether Pro is unlocked, the Extension sends ExtensionPay your <strong>installation key</strong>, and nothing else from the Extension. ExtensionPay answers with your licence status (whether and when you paid, the email linked to the purchase, and plan or trial fields if any). The Extension itself uses only the paid / not-paid answer.</li>
+<li><strong>ExtensionPay's pages:</strong> the Extension includes ExtensionPay's small script that runs only on extensionpay.com pages, so those pages can tell the Extension when a purchase is complete or your subscription has changed. That starts the repeated licence check described above (installation key only).</li>
 <li><strong>Managing or cancelling a subscription:</strong> done on ExtensionPay's pages.</li>
 <li><strong>Using Pro on another device:</strong> nothing syncs between devices (see below), so on a second computer click <strong>Restore purchase</strong> and log in on ExtensionPay's page with the email you paid with.</li>
 <li><strong>Never sent</strong> to ExtensionPay or Stripe: your notebooks, mind maps, notes, sources or the pages you visit.</li>
@@ -41,7 +42,7 @@
 <li>Treeport's own settings: your <strong>last-used export format</strong> (<code>treeport.format</code>) and <strong>whether Pro is unlocked</strong> (<code>treeport.license</code>: paid yes/no, plan type and when it was last checked). This is used only to show the right buttons; every Pro export is checked again with ExtensionPay.</li>
 <li>Whether you have asked for, or granted, access to Google's map sandbox frame (<code>treeport.grant</code>: requested or granted, and when). It contains no page data.</li>
 <li>When the Extension first loads, the ExtensionPay library records the date it was installed (<code>extensionpay_installed_at</code>), locally. This date is not sent anywhere.</li>
-<li><strong>Only if you pick a plan or click Restore purchase:</strong> the ExtensionPay library also stores, locally, the anonymous <strong>installation key</strong> (<code>extensionpay_api_key</code>) and your latest <strong>ExtensionPay account status</strong> (<code>extensionpay_user</code>: paid status and date, the email you paid with, and plan or subscription fields).</li>
+<li><strong>Only if you pick a plan or click Restore purchase:</strong> the ExtensionPay library also stores, locally, the <strong>installation key</strong> (<code>extensionpay_api_key</code>) and your latest <strong>ExtensionPay account status</strong> (<code>extensionpay_user</code>: paid status and date, the email you paid with, and plan or subscription fields).</li>
 <li>Uninstalling the Extension removes all of this from your browser.</li>
 </ul>
 <h2>What we do not do</h2>
@@ -56,7 +57,7 @@
 <h2>Not affiliated</h2>
 <p>Gemini Notebook™ and NotebookLM® are trademarks of Google LLC. Use of these trademarks is subject to Google Permissions. Treeport is an independent tool made by CCE Partners LLC; it is not affiliated with, endorsed by or sponsored by Google LLC. They are used only to describe compatibility.</p>
 <h2>Changes</h2>
-<p>We will post updates on this page and change the effective date.</p>
+<p>We will post updates on this page and show the date of the latest update.</p>
 <h2>Contact</h2>
 <p>CCE Partners LLC, 2501 Chatham Rd #4369, Springfield, IL 62704, USA: chris@hichrisgrant.com</p>
 </body></html>
